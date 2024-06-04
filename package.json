@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "All the files created while learning backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashish-509/backend.git"
+  },
+  "keywords": [
+    "backend",
+    "nodeJs",
+    "node",
+    "express"
+  ],
+  "author": "Ashish Kandel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashish-509/backend/issues"
+  },
+  "homepage": "https://github.com/ashish-509/backend#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
