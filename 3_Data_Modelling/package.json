@@ -1,0 +1,18 @@
+{
+  "name": "3_data_modelling",
+  "version": "1.0.0",
+  "description": "data modelling in mongoose",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "data",
+    "modelling"
+  ],
+  "author": "Ashish Kandel",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^8.4.1"
+  }
+}
