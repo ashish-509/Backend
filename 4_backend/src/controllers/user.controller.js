@@ -39,7 +39,7 @@ const registerUser = asyncHandler (async (req, res) => {
         throw new ApiError (400, "ALl fields are required.")
     }
 
-    const existedUser = User.findOne({
+    const existedUser = await User.findOne({
         $or : [{ username }, { email }]
     }) 
     if (existedUser) {
@@ -48,7 +48,12 @@ const registerUser = asyncHandler (async (req, res) => {
 
     // req.body ko access express le by default dinxa vane req.files ko access multer le dinxa.
     const avatarLocalPath = req.files?.avatar[0]?.path  
-    const coverImageLocalPath = req.files?.coverImage[0]?.path
+    // const coverImageLocalPath = req.files?.coverImage[0]?.path
+
+    let coverImageLocalPath;
+    if (req.files && Array.isArray(req.files.coverImage) && req.files.coverImage.length > 0) {
+        coverImageLocalPath = req.files.coverImage[0].path
+    }
 
     if ( ! avatarLocalPath ){
         throw new ApiError (400, "Avatar Image is required.")
